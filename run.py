@@ -8,6 +8,9 @@ app.config.from_object(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def replyMethod():
+    
+    number = request.form['From']
+    message_body = request.form['Body']
 
     greetings = ['Hello! ', 'Hi! ', 'Hey! ']
 
